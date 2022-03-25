@@ -4,9 +4,28 @@ import { useState } from "react";
 import axios from "axios";
 
 const Product = ({pizza}) => {
-  const [size, setSize] = useState(0);
+  const [size, setSize] = useState(pizza.prices[0]);
+  const [price, setPrice] = useState(0);
 
+  const changePrice = (number) =>{
+    setPrice(price + number);
+  }
+console.log(pizza)
+  const handleSize = (sizeIndex)=>{
+    const difference = pizza.prices[sizeIndex] - pizza.prices[size];
+    setSize(sizeIndex);
+    changePrice(difference);
+  }
 
+  const handleChange = (e, option) =>{
+    const checked = e.target.checked;
+
+    if(checked){
+      changePrice(option.price)
+    }else{
+      changePrice(-option.price)
+    }
+  }
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -20,57 +39,33 @@ const Product = ({pizza}) => {
         <p className={styles.desc}>{pizza.desc}</p>
         <h3 className={styles.choose}>Choose the size</h3>
         <div className={styles.sizes}>
-          <div className={styles.size} onClick={() => setSize(0)}>
+          <div className={styles.size} onClick={() => handleSize(0)}>
             <Image src="/img/size.png" layout="fill" alt="" />
             <span className={styles.number}>Small</span>
           </div>
-          <div className={styles.size} onClick={() => setSize(1)}>
+          <div className={styles.size} onClick={() => handleSize(1)}>
             <Image src="/img/size.png" layout="fill" alt="" />
             <span className={styles.number}>Medium</span>
           </div>
-          <div className={styles.size} onClick={() => setSize(2)}>
+          <div className={styles.size} onClick={() => handleSize(2)}>
             <Image src="/img/size.png" layout="fill" alt="" />
             <span className={styles.number}>Large</span>
           </div>
         </div>
         <h3 className={styles.choose}>Choose Extra ingredients</h3>
         <div className={styles.ingredients}>
-          <div className={styles.option}>
-            <input
-              type="checkbox"
-              id="double"
-              name="double"
-              className={styles.checkbox}
-            />
-            <label htmlFor="double">2X Ingredients</label>
-          </div>
-          <div className={styles.option}>
-            <input
-              className={styles.checkbox}
-              type="checkbox"
-              id="cheese"
-              name="cheese"
-            />
-            <label htmlFor="cheese">Extra Cheese</label>
-          </div>
-          <div className={styles.option}>
-            <input
-              className={styles.checkbox}
-              type="checkbox"
-              id="spicy"
-              name="spicy"
-            />
-            <label htmlFor="spicy">Spicy Sauce</label>
-          </div>
-          <div className={styles.option}>
-            <input
-              className={styles.checkbox}
-              type="checkbox"
-              id="garlic"
-              name="garlic"
-            />
-            <label htmlFor="garlic">Barbeque Sauce</label>
-          </div>
+          {pizza.extraOptions.map((option) => (
+            <div className={styles.option} key={option._id}>
+              <input
+                type="checkbox"
+                id={option.text}
+                name={option.text}
+                className={styles.checkbox}
+                onChange={(e) => handleChange(e, option)}
+              />
+              <label htmlFor="double">{option.text}</label>
+            </div>
+          ))} 
         </div>
         <div className={styles.add}>
             <input type="number" defaultValue={1} className={styles.quantity}/>

@@ -2,15 +2,15 @@ import styles from "../styles/Cart.module.css";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-//import {
-  //PayPalScriptProvider,
-  //PayPalButtons,
-  //usePayPalScriptReducer,
-//} from "@paypal/react-paypal-js";
+import {
+  PayPalScriptProvider,
+  PayPalButtons,
+  usePayPalScriptReducer,
+} from "@paypal/react-paypal-js";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
-//import OrderDetail from "../components/OrderDetail";
+import OrderDetail from "../components/OrderDetail";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -167,7 +167,7 @@ const Cart = () => {
               <PayPalScriptProvider
                 options={{
                   "client-id":
-                    "ATTL8fDJKfGzXNH4VVuDy1qW4_Jm8S0sqmnUTeYtWpqxUJLnXIn90V8YIGDg-SNPaB70Hg4mko_fde4-",
+                    "AVB2HwsLGKxCDjEwDR1IwXo74uCjOdj6EUeKrwXir8ullhhLkGg4Snmk9UKjpZWR6vCMljp69JgNwOAx",
                   components: "buttons",
                   currency: "USD",
                   "disable-funding": "credit,card,p24",

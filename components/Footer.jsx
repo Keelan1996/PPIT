@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/Footer.module.css";
 
+// bottom footer information
 const Footer = () => {
   return (
     <div className={styles.container}>
@@ -10,11 +11,11 @@ const Footer = () => {
       <div className={styles.item}>
         <div className={styles.card}>
           <h2 className={styles.motto}>
-            Keelan and Adam's WELL BAKED SLICE OF PIZZA.
+            Keelan and Adam's Game Store.
           </h2>
         </div>
         <div className={styles.card}>
-          <h1 className={styles.title}>FIND OUR RESTAURANTS</h1>
+          <h1 className={styles.title}>FIND OUR Stores</h1>
           <p className={styles.text}>
             Ballymena.
             <br /> Antrim
@@ -44,7 +45,7 @@ const Footer = () => {
           </p>
           <p className={styles.text}>
             SATURDAY - SUNDAY
-            <br /> 3:00 – 01:00AM
+            <br /> 3:00 – 9:00AM
           </p>
         </div>
       </div>

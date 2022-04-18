@@ -12,7 +12,7 @@ const Navbar = () => {
           <Image src="/img/telephone.png" alt="" width="32" height="32" />
         </div>
         <div className={styles.texts}>
-          <div className={styles.text}>ORDER NOW!</div>
+          <div className={styles.text}>Call Us!</div>
           <div className={styles.text}>012 345 678</div>
         </div>
       </div>

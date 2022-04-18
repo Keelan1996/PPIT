@@ -57,6 +57,7 @@
   margin-top: 20px;
 }
 
+/*  mobile formatting */
 @media screen and (max-width: 480px) {
   .container {
     flex-direction: column;

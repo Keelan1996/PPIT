@@ -81,6 +81,7 @@
     cursor: not-allowed;
   }
   
+  /*  mobile formatting */
   @media screen and (max-width: 480px) {
     .container {
       flex-direction: column;

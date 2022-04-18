@@ -13,8 +13,8 @@ export default function Home({ pizzaList, admin }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Pizza Restaurant in Newyork</title>
-        <meta name="description" content="Best pizza shop in town" />
+        <title>Video game shop</title>
+        <meta name="description" content="Enter The World Of Gaming!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />

@@ -57,7 +57,7 @@ const Add = ({ setClose }) => {
         <span onClick={() => setClose(true)} className={styles.close}>
           X
         </span>
-        <h1>Add a new Pizza</h1>
+        <h1>Add a new Product</h1>
         <div className={styles.item}>
           <label className={styles.label}>Choose an image</label>
           <input type="file" onChange={(e) => setFile(e.target.files[0])} />
@@ -71,7 +71,7 @@ const Add = ({ setClose }) => {
           />
         </div>
         <div className={styles.item}>
-          <label className={styles.label}>Desc</label>
+          <label className={styles.label}>Description</label>
           <textarea
             rows={4}
             type="text"
@@ -84,30 +84,30 @@ const Add = ({ setClose }) => {
             <input
               className={`${styles.input} ${styles.inputSm}`}
               type="number"
-              placeholder="Small"
+              placeholder="Deluxe"
               onChange={(e) => changePrice(e, 0)}
             />
             <input
               className={`${styles.input} ${styles.inputSm}`}
               type="number"
-              placeholder="Medium"
+              placeholder="Elite"
               onChange={(e) => changePrice(e, 1)}
             />
             <input
               className={`${styles.input} ${styles.inputSm}`}
               type="number"
-              placeholder="Large"
+              placeholder="Collectors"
               onChange={(e) => changePrice(e, 2)}
             />
           </div>
         </div>
         <div className={styles.item}>
-          <label className={styles.label}>Extra</label>
+          <label className={styles.label}>Condition</label>
           <div className={styles.extra}>
             <input
               className={`${styles.input} ${styles.inputSm}`}
               type="text"
-              placeholder="Item"
+              placeholder="Type"
               name="text"
               onChange={handleExtraInput}
             />

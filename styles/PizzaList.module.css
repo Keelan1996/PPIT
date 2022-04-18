@@ -19,6 +19,7 @@
     flex-wrap: wrap;
   }
   
+  /*  mobile formatting */
   @media screen and (max-width: 480px) {
     .title {
       text-align: center;

@@ -34,6 +34,7 @@
     color: rgb(211, 211, 211);
   }
   
+  /*  mobile formatting */
   @media screen and (max-width: 480px) {
     .container {
       height: auto;

@@ -84,13 +84,13 @@ const Add = ({ setClose }) => {
             <input
               className={`${styles.input} ${styles.inputSm}`}
               type="number"
-              placeholder="Deluxe"
+              placeholder="Standard"
               onChange={(e) => changePrice(e, 0)}
             />
             <input
               className={`${styles.input} ${styles.inputSm}`}
               type="number"
-              placeholder="Elite"
+              placeholder="Deluxe"
               onChange={(e) => changePrice(e, 1)}
             />
             <input

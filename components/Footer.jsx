@@ -6,13 +6,18 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
-        <Image src="/img/bg.png" objectFit="cover" layout="fill" alt="" />
+        <Image src="/img/game1.png" objectFit="cover" layout="fill" alt="" />
       </div>
       <div className={styles.item}>
         <div className={styles.card}>
           <h2 className={styles.motto}>
-            Keelan and Adam's Game Store.
+            Keelan and Adam's Game Store. 
           </h2>
+          <p className={styles.text}>
+           In our store we sale the retro and the newest games on the market! <br>
+           </br>
+           We aim to delivery our products in the best condition and the quickest of time.
+          </p>
         </div>
         <div className={styles.card}>
           <h1 className={styles.title}>FIND OUR Stores</h1>

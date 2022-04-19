@@ -1,7 +1,7 @@
 .container{
     height: 90px;
-    padding: 0px 80px;
-    background-color: orangered;
+    padding: 50px 250px;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,17 +16,17 @@
 }
 
 .text:first-child{
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 700;
 }
 
 .text:last-child{
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .item{
-    flex:2;
+    flex:3;
     display: flex;
     align-items: center;
 }
@@ -40,7 +40,7 @@
 
 .callButton{
     background-color: white;
-    border-radius: 50%;
+    border-radius: 70%;
     padding: 10px;
     width:50px;
     height:50px;

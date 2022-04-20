@@ -5,12 +5,12 @@ const ProductSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
-      maxlength: 60,
+      maxlength: 100,
     },
     desc: {
       type: String,
       required: true,
-      maxlength: 200,
+      maxlength: 800,
     },
     img: {
       type: String,

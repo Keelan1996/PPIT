@@ -24,7 +24,7 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h1>Admin Dashboard</h1>
+        <h1>Admin Log In</h1>
         <input
           placeholder="username"
           className={styles.input}

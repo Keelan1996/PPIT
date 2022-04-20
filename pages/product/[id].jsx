@@ -49,22 +49,22 @@ const Product = ({ pizza }) => {
         <h1 className={styles.title}>{pizza.title}</h1>
         <span className={styles.price}>${price}</span>
         <p className={styles.desc}>{pizza.desc}</p>
-        <h3 className={styles.choose}>Choose the size</h3>
+        <h3 className={styles.choose}>Choose which Edition</h3>
         <div className={styles.sizes}>
           <div className={styles.size} onClick={() => handleSize(0)}>
-            <Image src="/img/size.png" layout="fill" alt="" />
-            <span className={styles.number}>Small</span>
+            <Image src="/img/game7.png" layout="fill" alt="" />
+            <span className={styles.number}>Standard</span>
           </div>
           <div className={styles.size} onClick={() => handleSize(1)}>
-            <Image src="/img/size.png" layout="fill" alt="" />
-            <span className={styles.number}>Medium</span>
+            <Image src="/img/game7.png" layout="fill" alt="" />
+            <span className={styles.number}>Deluxe</span>
           </div>
           <div className={styles.size} onClick={() => handleSize(2)}>
-            <Image src="/img/size.png" layout="fill" alt="" />
-            <span className={styles.number}>Large</span>
+            <Image src="/img/game7.png" layout="fill" alt="" />
+            <span className={styles.number}>Collectors</span>
           </div>
         </div>
-        <h3 className={styles.choose}>Choose extra ingredients</h3>
+        <h3 className={styles.choose}>Choose one below</h3>
         <div className={styles.ingredients}>
           {pizza.extraOptions.map((option) => (
             <div className={styles.option} key={option._id}>

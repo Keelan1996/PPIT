@@ -99,7 +99,7 @@ const Cart = () => {
             <tr className={styles.trTitle}>
               <th>Product</th>
               <th>Name</th>
-              <th>Extras</th>
+              <th>Condition</th>
               <th>Price</th>
               <th>Quantity</th>
               <th>Total</th>

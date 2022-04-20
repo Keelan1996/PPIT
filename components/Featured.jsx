@@ -5,11 +5,12 @@ import { useState } from "react";
 const Featured = () => {
   const [index, setIndex] = useState(0);
   const images = [
-    "/img/game3.png",
+    "/img/game3.png", // images array
     "/img/game4.png",
     "/img/game5.png",
   ];
 
+  // if the arrow is pressed left or right the index changes in array
   const handleArrow = (direction) =>{
       if(direction==="l"){
           setIndex(index !== 0 ? index-1 : 2)
@@ -19,6 +20,7 @@ const Featured = () => {
       }
   }
 
+  // displays the images and takes input if the left or right arrows are pressed
   return (
     <div className={styles.container}>
       <div className={styles.arrowContainer} style={{ left: 0 }} onClick={()=>handleArrow("l")}>

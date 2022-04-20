@@ -1,6 +1,7 @@
 import styles from "../styles/PizzaList.module.css";
 import PizzaCard from "./PizzaCard"
 
+// main page on website, displays the products by referencing the productCard
 const PizzaList = ({pizzaList}) => {
   return (
     <div className={styles.container}>

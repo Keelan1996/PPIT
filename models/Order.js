@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// the model for the orders, the type of data it thats in the database
 const OrderSchema = new mongoose.Schema(
   {
     customer: {

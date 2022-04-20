@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// the type of data from the product thats in the database
 const ProductSchema = new mongoose.Schema(
   {
     title: {

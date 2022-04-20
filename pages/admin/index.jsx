@@ -3,11 +3,13 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/Admin.module.css";
 
+// admin page
 const Index = ({ orders, products }) => {
-  const [pizzaList, setPizzaList] = useState(products);
-  const [orderList, setOrderList] = useState(orders);
-  const status = ["preparing", "on the way", "delivered"];
+  const [pizzaList, setPizzaList] = useState(products); //  products from database
+  const [orderList, setOrderList] = useState(orders); //  order from database
+  const status = ["preparing", "on the way", "delivered"]; // change status of orders in admin page
 
+ // deletes product from database
   const handleDelete = async (id) => {
     console.log(id);
     try {
@@ -19,6 +21,7 @@ const Index = ({ orders, products }) => {
       console.log(err);
     }
   };
+    // gets orders from database and change status to what that order is at
 
   const handleStatus = async (id) => {
     const item = orderList.filter((order) => order._id === id)[0];
@@ -36,7 +39,7 @@ const Index = ({ orders, products }) => {
       console.log(err);
     }
   };
-
+ // html of how the page looks
   return (
     <div className={styles.container}>
       <div className={styles.item}>
@@ -100,7 +103,7 @@ const Index = ({ orders, products }) => {
                 <td>{order.customer}</td>
                 <td>${order.total}</td>
                 <td>
-                  {order.method === 0 ? <span>cash</span> : <span>paid</span>}
+                  {order.method === 0 ? <span>cash</span> : <span>paid</span>} 
                 </td>
                 <td>{status[order.status]}</td>
                 <td>
@@ -117,6 +120,7 @@ const Index = ({ orders, products }) => {
   );
 };
 
+// checks for authentication
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
 

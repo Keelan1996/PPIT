@@ -1,6 +1,8 @@
 import dbConnect from "../../../util/mongo";
 import Product from "../../../models/Product";
 
+// restful api gets a specific product from datbase, uploads a product and deletes a specific product. On product page and admin
+
 export default async function handler(req, res) {
   const {
     method,

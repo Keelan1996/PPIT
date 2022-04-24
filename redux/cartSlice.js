@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// is the cart updates the page if there are products chosen
 const cartSlice = createSlice({
   name: "cart",
   initialState: {

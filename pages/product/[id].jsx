@@ -5,6 +5,9 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/cartSlice";
 
+
+// This is the page where it  displays one specific product after you click on it in the homepage.
+// In this page you are giving the options to choose which edition and amount before adding to cart
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0]);
   const [size, setSize] = useState(0);
@@ -95,6 +98,7 @@ const Product = ({ pizza }) => {
   );
 };
 
+// gets specific product data
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
     `http://localhost:3000/api/products/${params.id}`

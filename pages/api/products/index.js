@@ -1,6 +1,7 @@
 import dbConnect from "../../../util/mongo";
 import Product from "../../../models/Product";
 
+// restful api that commincates with datbase for products, main page
 export default async function handler(req, res) {
   const { method, cookies } = req;
 

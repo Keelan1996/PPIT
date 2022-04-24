@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styles from "../styles/OrderDetail.module.css";
 
+
+// takes in order details from user when making purchase
 const OrderDetail = ({ total, createOrder }) => {
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");

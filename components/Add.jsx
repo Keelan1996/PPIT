@@ -3,6 +3,8 @@ import styles from "../styles/Add.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
 
+
+// takes in the information for a new product, also uses cloudinary to host the image of the product
 const Add = ({ setClose }) => {
   const [file, setFile] = useState(null);
   const [title, setTitle] = useState(null);

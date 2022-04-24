@@ -1,6 +1,7 @@
 import dbConnect from "../../../util/mongo";
 import Order from "../../../models/Order";
 
+// restful api which gets specific order id
 const handler = async (req, res) => {
   const {
     method,

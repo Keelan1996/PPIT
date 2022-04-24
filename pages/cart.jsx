@@ -12,6 +12,10 @@ import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
 import OrderDetail from "../components/OrderDetail";
 
+
+// This is the cart page which shows the products the user added to the cart and  creates an order when the user
+// either pays through paypal or puts in details for cosh on delivery
+// paypal code is from the paypal website, which gives you a way to implement a paypal button
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [open, setOpen] = useState(false);

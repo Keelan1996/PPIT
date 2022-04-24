@@ -132,7 +132,7 @@ export const getServerSideProps = async (ctx) => {
       },
     };
   }
-
+   // gets data from database
   const productRes = await axios.get("http://localhost:3000/api/products");
   const orderRes = await axios.get("http://localhost:3000/api/orders");
 

@@ -1,5 +1,7 @@
 import cookie from "cookie";
 
+// the user posts a username and password this checks if they're correct and responds if succesful or not
+// if correct it sends a cookie
 const handler = (req, res) => {
   if (req.method === "POST") {
     const { username, password } = req.body;

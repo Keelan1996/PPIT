@@ -1,3 +1,13 @@
+
+# The following is a PDF demostrating and explaining everything there is need to know about this React Next.js E-Commerce App:
+
+[PPITdocumentKeelanDuddyV1.pdf](https://github.com/Keelan1996/PPIT/files/8932784/PPITdocumentKeelanDuddyV1.pdf)
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
